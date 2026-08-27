@@ -1,0 +1,21 @@
+name = "cf-vless"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# 如需 node 兼容 API 可取消下一行注释
+# compatibility_flags = ["nodejs_compat"]
+
+# 非敏感变量可直接写在这里；UUID 建议用 secret（见 README）
+[vars]
+PATH = "/vless"
+NAME = "CF-Node"
+
+# UUID 请改成你自己的（可用 https://www.uuidgenerator.net 生成）
+# 更安全的做法: 注释掉下面这行，改用 `wrangler secret put UUID`
+UUID = "f7b2c4e1-3a9d-4f6b-8c2e-1d5a7b9c3e4f"
+
+# 可选: 订阅转换服务地址（Clash / Sing-Box 订阅用）
+# SUBCONVERTER = "https://sub.xeton.dev"
+
+[observability]
+enabled = true
